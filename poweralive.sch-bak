@@ -1,0 +1,258 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Powerbank alive circuit"
+Date "2023/04/28"
+Rev "0"
+Comp "Open source"
+Comment1 "by Robopic"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R4
+U 1 1 64493F50
+P 6000 2300
+F 0 "R4" H 6070 2346 50  0000 L CNN
+F 1 "220K" H 6070 2255 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5930 2300 50  0001 C CNN
+F 3 "~" H 6000 2300 50  0001 C CNN
+	1    6000 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 64494DA2
+P 6000 2600
+F 0 "R5" H 6070 2646 50  0000 L CNN
+F 1 "33K" H 6070 2555 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5930 2600 50  0001 C CNN
+F 3 "~" H 6000 2600 50  0001 C CNN
+	1    6000 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 64495705
+P 5750 2100
+F 0 "R3" H 5680 2054 50  0000 R CNN
+F 1 "1K" H 5680 2145 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5680 2100 50  0001 C CNN
+F 3 "~" H 5750 2100 50  0001 C CNN
+	1    5750 2100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4750 2250 4550 2250
+Wire Wire Line
+	4550 2250 4550 2900
+Connection ~ 6000 2450
+Wire Wire Line
+	6000 2750 6000 2900
+$Comp
+L power:+5V #PWR0101
+U 1 1 64499F6D
+P 6000 1400
+F 0 "#PWR0101" H 6000 1250 50  0001 C CNN
+F 1 "+5V" H 6015 1573 50  0000 C CNN
+F 2 "" H 6000 1400 50  0001 C CNN
+F 3 "" H 6000 1400 50  0001 C CNN
+	1    6000 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 6449AFB7
+P 6000 3450
+F 0 "#PWR0102" H 6000 3200 50  0001 C CNN
+F 1 "GND" H 6005 3277 50  0000 C CNN
+F 2 "" H 6000 3450 50  0001 C CNN
+F 3 "" H 6000 3450 50  0001 C CNN
+	1    6000 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 3200 6000 3300
+$Comp
+L Device:C C1
+U 1 1 6449C3CC
+P 4300 2450
+F 0 "C1" V 4552 2450 50  0000 C CNN
+F 1 "0.1 uF" V 4461 2450 50  0000 C CNN
+F 2 "Capacitor_THT:C_Radial_D18.0mm_H35.5mm_P7.50mm" H 4338 2300 50  0001 C CNN
+F 3 "~" H 4300 2450 50  0001 C CNN
+	1    4300 2450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP C2
+U 1 1 6449C994
+P 6000 3050
+F 0 "C2" H 6118 3096 50  0000 L CNN
+F 1 "47 uF" H 6118 3005 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 6038 2900 50  0001 C CNN
+F 3 "~" H 6000 3050 50  0001 C CNN
+	1    6000 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 2900 5750 2900
+Wire Wire Line
+	6000 3300 5250 3300
+Wire Wire Line
+	5250 3300 5250 2850
+Connection ~ 6000 3300
+Wire Wire Line
+	6000 3300 6000 3450
+Wire Wire Line
+	4750 2450 4450 2450
+Wire Wire Line
+	4150 2450 4150 3300
+$Comp
+L Transistor_BJT:BC327 Q1
+U 1 1 644A561A
+P 5750 1750
+F 0 "Q1" V 6078 1750 50  0000 C CNN
+F 1 "BC327" V 5987 1750 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5950 1675 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF" H 5750 1750 50  0001 L CNN
+	1    5750 1750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 644ACAF1
+P 5200 1450
+F 0 "R1" V 5407 1450 50  0000 C CNN
+F 1 "390" V 5316 1450 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5130 1450 50  0001 C CNN
+F 3 "~" H 5200 1450 50  0001 C CNN
+	1    5200 1450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 644AD1FD
+P 5200 1650
+F 0 "R2" V 5407 1650 50  0000 C CNN
+F 1 "22" V 5316 1650 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5130 1650 50  0001 C CNN
+F 3 "~" H 5200 1650 50  0001 C CNN
+	1    5200 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 644AEE73
+P 4900 1450
+F 0 "D1" H 4893 1667 50  0000 C CNN
+F 1 "LED" H 4893 1576 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 4900 1450 50  0001 C CNN
+F 3 "~" H 4900 1450 50  0001 C CNN
+	1    4900 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 1650 5550 1650
+Connection ~ 5550 1650
+Wire Wire Line
+	5550 1650 5600 1650
+Wire Wire Line
+	5350 1450 5550 1450
+Wire Wire Line
+	5550 1450 5550 1650
+Wire Wire Line
+	4150 3300 5250 3300
+Connection ~ 5250 3300
+Wire Wire Line
+	4750 1450 3900 1450
+Wire Wire Line
+	3900 1450 3900 3300
+Connection ~ 4150 3300
+Wire Wire Line
+	5050 1650 4000 1650
+Wire Wire Line
+	4000 1650 4000 3300
+Wire Wire Line
+	3900 3300 4000 3300
+Connection ~ 4000 3300
+Wire Wire Line
+	4000 3300 4150 3300
+Wire Wire Line
+	6000 1400 6000 1450
+Wire Wire Line
+	6000 1650 5950 1650
+Connection ~ 6000 1650
+Wire Wire Line
+	6000 1900 5250 1900
+Wire Wire Line
+	5250 1900 5250 2050
+Connection ~ 6000 1900
+Wire Wire Line
+	6000 1900 6000 1950
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 644B5CF5
+P 6500 2200
+F 0 "J1" H 6580 2192 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 6580 2101 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 6500 2200 50  0001 C CNN
+F 3 "~" H 6500 2200 50  0001 C CNN
+	1    6500 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 2100 6450 2200
+Wire Wire Line
+	6450 2200 6300 2200
+Wire Wire Line
+	6300 2200 6300 1450
+Wire Wire Line
+	6300 1450 6000 1450
+Connection ~ 6300 2200
+Connection ~ 6000 1450
+Wire Wire Line
+	6000 1450 6000 1650
+Wire Wire Line
+	6300 2300 6300 3300
+Wire Wire Line
+	6300 3300 6000 3300
+Wire Wire Line
+	5750 2450 6000 2450
+$Comp
+L Timer:NE555P U1
+U 1 1 64493256
+P 5250 2450
+F 0 "U1" H 5250 3031 50  0000 C CNN
+F 1 "NE555P" H 5250 2940 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5900 2050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 6100 2050 50  0001 C CNN
+	1    5250 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 2650 5750 2900
+Wire Wire Line
+	6000 2900 5750 2900
+Connection ~ 6000 2900
+Connection ~ 5750 2900
+Wire Wire Line
+	6000 1650 6000 1900
+Wire Wire Line
+	4750 2650 4450 2650
+Wire Wire Line
+	4450 2000 5500 2000
+Wire Wire Line
+	5500 2000 5500 1950
+Connection ~ 6000 1950
+Wire Wire Line
+	6000 1950 6000 2150
+Wire Wire Line
+	4450 2000 4450 2650
+Wire Wire Line
+	5500 1950 6000 1950
+$EndSCHEMATC
